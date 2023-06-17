@@ -30,11 +30,7 @@ class RegisterRequest extends FormRequest
             ],
             'password' => [
                 'required', 'confirmed', 'string',
-                Password::min(8)
-                    ->letters()
-                    ->mixedCase()
-                    ->numbers()
-                    ->uncompromised()
+                Password::min(8)->letters()->mixedCase()->numbers()->uncompromised()
             ],
         ];
     }
